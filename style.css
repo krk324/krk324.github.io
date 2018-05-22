@@ -263,6 +263,12 @@ ul.slides li img
     line-height: 40px;
 }
 
+.page-desc .br-space
+{
+    margin-bottom: -15px;
+    margin-top: -15px;
+}
+
 /* BLOG */
 
 .blog-top-content.page-desc
