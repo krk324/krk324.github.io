@@ -571,6 +571,23 @@ ul.archive-list li span
     color: #fd3137;
 }
 
+.history-text
+{
+}
+
+.history-date
+{
+    float:right;
+}
+
+@media screen and (max-width: 1066px) {
+    .history-date
+    {
+        float: none;
+    }
+}
+
+
 /* END ABOUT PAGE */
 
 
