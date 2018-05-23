@@ -584,6 +584,8 @@ ul.archive-list li span
 .history-date
 {
     float:right;
+    font-size:16px;
+    color: #adadad;
 }
 
 @media screen and (max-width: 1066px) {
