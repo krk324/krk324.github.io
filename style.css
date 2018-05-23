@@ -588,6 +588,13 @@ ul.archive-list li span
     color: #adadad;
 }
 
+.history-date b {
+    color: #92AFD7;
+    /*color: #151E3F;*/
+    /*color: #3D5A80;*/
+    font-weight: 400;
+}
+
 @media screen and (max-width: 1066px) {
     .history-date
     {
