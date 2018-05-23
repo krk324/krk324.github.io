@@ -251,8 +251,14 @@ ul.slides li img
     width: 925px;
     float: right;
     font-size: 24px;
-    margin-bottom: 25px;
+    margin-top: 10px;
+    margin-bottom: 5px;
     font-weight: 700;
+}
+
+.page-heading p
+{
+    margin-bottom: -15px;
 }
 
 .page-desc
