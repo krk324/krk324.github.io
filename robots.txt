@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow:
+Disallow: /single-portfolio.html
+Disallow: /single.html
+Disallow: /blog.html
