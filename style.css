@@ -274,6 +274,17 @@ ul.slides li img
     margin-top: -10px;
 }
 
+.button
+{
+    color: #FD3137;
+    border: 3px solid #FD3137;
+    padding: 5px 35px !important;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 50px !important;
+}
+
 /* BLOG */
 
 .blog-top-content.page-desc
