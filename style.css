@@ -7,7 +7,7 @@ body
 {
     background-color: #E2E0E0;
     font-family: 'Montserrat', sans-serif, Roboto;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 35px;
     font-weight: 200;
     color: #191919;
@@ -264,7 +264,7 @@ ul.slides li img
 {
     width: 925px;
     float: right;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 40px;
 }
 
