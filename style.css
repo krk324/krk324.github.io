@@ -677,7 +677,6 @@ ul.archive-list li span
     height: auto;
     max-height: none;
     max-width: none;
-    margin-top: 30px;
 
 }
 
@@ -694,6 +693,7 @@ ul.archive-list li span
 .grid-item.p_one
 {
     width: 1329px;
+    margin-top: 30px;
 }
 
 .portfolio-text-holder
