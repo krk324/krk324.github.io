@@ -1421,6 +1421,7 @@ li.left-footer-content.mobile
     .filters-button-group
     {
         text-align: center;
+        font-size: 14px;
     }
 
     .portfolio-text-holder
@@ -1429,6 +1430,7 @@ li.left-footer-content.mobile
         left: 30px;
         right: 30px;
         bottom: 30px;
+        font-size: 14px;
     }
 
     .single-post .content-wrap
