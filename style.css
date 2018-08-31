@@ -47,6 +47,7 @@ input, textarea, select
     height: 100%;
     z-index: 99999;
     background-color: white;
+    opacity: 0.8;
 }
 
 .doc-loader td
