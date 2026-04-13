@@ -218,6 +218,25 @@
     @media (max-width: 640px) {
       .lang-switcher { top: 14px; right: 14px; padding: 7px 12px; font-size: 10px; gap: 8px; }
     }
+
+    .breath {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 1.8s ease, transform 1.8s ease;
+    }
+    .breath.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+    .breath-line-delayed {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 1.8s ease 0.6s, transform 1.8s ease 0.6s;
+    }
+    .breath.is-visible .breath-line-delayed {
+      opacity: 1;
+      transform: none;
+    }
   </style>
 </head>
 <body>
@@ -336,6 +355,13 @@ What does it actually mean to do good? Is making money the right answer? I had l
       </div></div></div>
     </div>
 
+    <!-- breath 1→2 -->
+    <div class="breath" style="padding:120px 0;text-align:center;">
+      <div style="width:40px;height:1px;background:rgba(192,184,173,0.3);margin:0 auto 32px;"></div>
+      <p style="font-family:'Zen Old Mincho','Georgia',serif;font-size:13px;color:#c0b8ad;letter-spacing:0.12em;line-height:2.4;">Just for a moment, I held success in my hands.</p>
+      <p class="breath-line-delayed" style="font-family:'Zen Old Mincho','Georgia',serif;font-size:13px;color:#c0b8ad;letter-spacing:0.12em;line-height:2.4;margin-top:4px;">There was nothing beyond it.</p>
+    </div>
+
     <!-- ── ZONE 2: II ── -->
     <div class="zone-label" style="padding:80px 0 16px;">
       <span style="font-family:'Zen Old Mincho',serif;font-size:15px;color:#c0b8ad;letter-spacing:0.2em;">II  Chasing meaning &amp; truth</span>
@@ -393,13 +419,15 @@ And I noticed one more thing. Behind the goodwill of "solving social problems" s
     <!-- z2-3 -->
     <div class="fragment" style="transition:opacity 1s ease 0.18s,transform 1s ease 0.18s;">
       <button class="fragment-toggle" onclick="toggleFragment(this)">
-        <span class="frag-text">Laughter was a tiny transformation</span>
+        <span class="frag-text">I explored Buddhism and AI — and ended up as a comedian.</span>
         <span class="toggle-icon">+</span>
       </button>
       <div class="fragment-detail"><div><div class="frag-inner">
         <p class="frag-body">Coaching kept teaching me one thing: by the time someone arrives at coaching, they have already stepped onto the path of transformation. The real question was about everyone before that step. How do you invite consciousness transformation in people who haven't entered the path yet?
 
-The answer I arrived at was comedy. I entered Titan's school and performed as comedian Kagayakiman. People notice the moment things tilt slightly off-center — and they laugh. Laughter is a small noticing, a small transformation. Its reach is vastly wider than meditation or coaching. The widest mouth of the same funnel, pointed at the same place.</p>
+The answer I arrived at was comedy. I entered Titan's school and performed as comedian Kagayakiman. People notice the moment things tilt slightly off-center — and they laugh. Laughter is a small noticing, a small transformation. Its reach is vastly wider than meditation or coaching. The widest mouth of the same funnel, pointed at the same place.
+
+Verifying philosophy through the body — the homo ludens in me was born here.</p>
         <div class="frag-links">
           <a href="https://www.youtube.com/watch?v=uLbldP4AGXY&t=4809s" target="_blank" rel="noopener noreferrer" class="frag-link">Kagayakiman YouTube</a>
           <a href="https://note.com/futurehuman/n/nf21c24336ea3" target="_blank" rel="noopener noreferrer" class="frag-link">Why I joined comedy school (note)</a>
@@ -418,11 +446,17 @@ The answer I arrived at was comedy. I entered Titan's school and performed as co
 
 Money, success, meaning, recognition — I had let go of each thing I had been chasing, one by one. And further down, I let go of my body, even of breath. In a world that was nothing but consciousness, everything was there, and nothing was there.
 
-When I came back, the ordinary in front of me was a miracle. To breathe. To have family. There was nothing but gratitude.</p>
+When I came back, the ordinary in front of me was a miracle. To breathe. To have family. There was nothing but gratitude. Knowing emptiness, I had lost nothing — I had learned to play life as a game.</p>
         <div class="frag-links">
           <a href="https://note.com/futurehuman/n/n55784b4fc56c" target="_blank" rel="noopener noreferrer" class="frag-link">Near-death experience (note)</a>
         </div>
       </div></div></div>
+    </div>
+
+    <!-- breath 2→3 -->
+    <div class="breath" style="padding:120px 0;text-align:center;">
+      <div style="width:40px;height:1px;background:rgba(192,184,173,0.3);margin:0 auto 32px;"></div>
+      <p style="font-family:'Zen Old Mincho','Georgia',serif;font-size:13px;color:#c0b8ad;letter-spacing:0.12em;line-height:2.4;">When I stopped chasing, it was already here.</p>
     </div>
 
     <!-- ── ZONE 3: III ── -->
@@ -437,7 +471,9 @@ When I came back, the ordinary in front of me was a miracle. To breathe. To have
         <span class="toggle-icon">+</span>
       </button>
       <div class="fragment-detail"><div><div class="frag-inner">
-        <p class="frag-body">After seeing emptiness, the place I returned to was the everyday. I want to protect the ordinary for the next generation. Consciousness transformation is the doorway. So that even one more person might notice — everything I do moves on that axis.</p>
+        <p class="frag-body">After seeing emptiness, the place I returned to was the everyday. It was not a compromise. I had chased outward, dove inward, and let go even of emptiness — only to find that what had always been in front of me was everything.
+
+I want to protect the ordinary for the next generation. Consciousness transformation is the doorway. So that even one more person might notice — everything I do moves on that axis.</p>
       </div></div></div>
     </div>
 
@@ -623,14 +659,6 @@ Past clients: seed–Series B founders / social entrepreneurs / former foreign-f
                 <span style="color:#c0b8ad;">/</span>
                 <span>Web development</span>
                 <span style="color:#c0b8ad;">/</span>
-                <span>Web marketing</span>
-                <span style="color:#c0b8ad;">/</span>
-                <span>Web ad operations</span>
-                <span style="color:#c0b8ad;">/</span>
-                <span>International business development</span>
-                <span style="color:#c0b8ad;">/</span>
-                <span>Recruiting &amp; HR</span>
-                <span style="color:#c0b8ad;">/</span>
                 <span>Venture investing</span>
                 <span style="color:#c0b8ad;">/</span>
                 <span>AI advisor</span>
@@ -689,17 +717,6 @@ Past clients: seed–Series B founders / social entrepreneurs / former foreign-f
         <a href="https://www.storys.jp/" target="_blank" rel="noopener noreferrer" style="font-family:Georgia,serif;font-size:13px;color:#6b6560;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(160,152,140,0.4);">STORYS.JP</a>
       </div>
 
-      <div style="display:flex;flex-wrap:wrap;gap:6px 14px;margin-bottom:40px;">
-        <span style="font-family:Georgia,serif;font-size:11px;color:#a8a095;">#loves designing new services</span>
-        <span style="font-family:Georgia,serif;font-size:11px;color:#a8a095;">#wants to do good for the world</span>
-        <span style="font-family:Georgia,serif;font-size:11px;color:#a8a095;">#tech believer</span>
-        <span style="font-family:Georgia,serif;font-size:11px;color:#a8a095;">#future daydreamer</span>
-        <span style="font-family:Georgia,serif;font-size:11px;color:#a8a095;">#reads whenever idle</span>
-        <span style="font-family:Georgia,serif;font-size:11px;color:#a8a095;">#solo karaoke enthusiast</span>
-        <span style="font-family:Georgia,serif;font-size:11px;color:#a8a095;">#happy in body and mind</span>
-        <span style="font-family:Georgia,serif;font-size:11px;color:#a8a095;">#dad of two</span>
-      </div>
-
       <div style="display:flex;flex-wrap:wrap;gap:6px 18px;">
         <a href="https://gsacademy.jp/" target="_blank" rel="noopener noreferrer" style="font-family:Georgia,serif;font-size:11px;color:#a8a095;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(160,152,140,0.35);">G's Academy mentor</a>
         <a href="https://angl.jp/kagakawa" target="_blank" rel="noopener noreferrer" style="font-family:Georgia,serif;font-size:11px;color:#a8a095;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(160,152,140,0.35);">Angel investing</a>
@@ -738,6 +755,7 @@ Past clients: seed–Series B founders / social entrepreneurs / former foreign-f
     observeFade('.zone-label', 0.3);
     observeFade('.name-block', 0.3);
     observeFade('.tagline', 0.3);
+    observeFade('.breath', 0.3);
 
     var indicator = document.getElementById('scroll-indicator');
     var arrow = document.getElementById('scroll-arrow');
