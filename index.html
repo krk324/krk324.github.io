@@ -1,828 +1,663 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>Kaga Kawabata — KAGAYAKI KAWABATA</title>
-  <meta name="description" content="Beyond capitalist happiness — practicing &quot;consciousness transformation&quot; for the age of the singularity, through technology, Japanese culture, storytelling, daily life, and local community. Podcaster, Executive Coach (ICF), Director at ao inc. &amp; STORYS.JP.">
+  <meta name="description"
+    content="Beyond capitalist happiness — practicing &quot;consciousness transformation&quot; for the age of the singularity, through technology, Japanese culture, storytelling, daily life, and local community. Podcaster, Executive Coach (ICF), Director at ao inc. &amp; STORYS.JP.">
   <meta name="author" content="Kagayaki Kawabata">
-  <meta name="keywords" content="Kagayaki Kawabata, Kaga Kawabata, consciousness transformation, mental wellness, coaching, podcast, STORYS.JP, ao inc., singularity, Japan">
+  <meta name="keywords"
+    content="Kagayaki Kawabata, Kaga Kawabata, consciousness transformation, mental wellness, coaching, podcast, STORYS.JP, ao inc., singularity, Japan">
   <link rel="canonical" href="https://kagakawa.com/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kagakawa.com/">
   <meta property="og:site_name" content="KAGAYAKI KAWABATA">
   <meta property="og:title" content="Kaga Kawabata — KAGAYAKI KAWABATA">
-  <meta property="og:description" content="Beyond capitalist happiness — practicing &quot;consciousness transformation&quot; for the age of the singularity, through technology, Japanese culture, storytelling, daily life, and local community.">
+  <meta property="og:description"
+    content="Beyond capitalist happiness — practicing &quot;consciousness transformation&quot; for the age of the singularity, through technology, Japanese culture, storytelling, daily life, and local community.">
   <meta property="og:image" content="https://kagakawa.com/profile.jpg">
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@kagayakimann">
   <meta name="twitter:title" content="Kaga Kawabata — KAGAYAKI KAWABATA">
-  <meta name="twitter:description" content="Beyond capitalist happiness — practicing &quot;consciousness transformation&quot; for the age of the singularity, through technology, Japanese culture, storytelling, daily life, and local community.">
+  <meta name="twitter:description"
+    content="Beyond capitalist happiness — practicing &quot;consciousness transformation&quot; for the age of the singularity, through technology, Japanese culture, storytelling, daily life, and local community.">
   <meta name="twitter:image" content="https://kagakawa.com/profile.jpg">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;700&display=swap');
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-    body { background: #f4f1ec; }
-    ::selection { background: #d6cfc5; }
-
-    @keyframes bgReveal {
-      0%   { background: #0a0908; }
-      55%  { background: #0a0908; }
-      80%  { background: #f4f1ec; }
-      100% { background: #f4f1ec; }
-    }
-    @keyframes line1 {
-      0%   { opacity: 0; color: #dcd7d0; }
-      20%  { opacity: 1; color: #dcd7d0; }
-      60%  { opacity: 1; color: #dcd7d0; }
-      85%  { opacity: 1; color: #302c28; }
-      100% { opacity: 1; color: #302c28; }
-    }
-    @keyframes line2 {
-      0%   { opacity: 0; color: #dcd7d0; }
-      20%  { opacity: 1; color: #dcd7d0; }
-      55%  { opacity: 1; color: #dcd7d0; }
-      80%  { opacity: 1; color: #302c28; }
-      100% { opacity: 1; color: #302c28; }
-    }
-    @keyframes line3 {
-      0%   { opacity: 0; color: #dcd7d0; }
-      20%  { opacity: 1; color: #dcd7d0; }
-      50%  { opacity: 1; color: #dcd7d0; }
-      75%  { opacity: 1; color: #302c28; }
-      100% { opacity: 1; color: #302c28; }
-    }
-    @keyframes line4 {
-      0%   { opacity: 0; color: #dcd7d0; }
-      20%  { opacity: 1; color: #dcd7d0; }
-      45%  { opacity: 1; color: #dcd7d0; }
-      70%  { opacity: 1; color: #302c28; }
-      100% { opacity: 1; color: #302c28; }
-    }
-    @keyframes scrollHint {
-      0%, 100% { transform: translateY(0); opacity: 0.6; }
-      50%       { transform: translateY(6px); opacity: 0.3; }
-    }
-
-    .hero {
-      min-height: 100svh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 0 32px;
-      position: relative;
-      background: #0a0908;
-      animation: bgReveal 8s ease forwards;
-    }
-    .name-block {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 1.2s ease, transform 1.2s ease;
-    }
-    .name-block.is-visible { opacity: 1; transform: none; }
-
-    .tagline {
-      opacity: 0;
-      transition: opacity 1s ease 0.2s;
-    }
-    .tagline.is-visible { opacity: 1; }
-
-    .zone-label {
-      opacity: 0;
-      transition: opacity 1.2s ease;
-    }
-    .zone-label.is-visible { opacity: 1; }
-
-    .fragment {
-      opacity: 0;
-      transform: translateY(20px);
-      border-bottom: 1px solid rgba(180,172,160,0.3);
-    }
-    .fragment.is-visible { opacity: 1; transform: none; }
-
-    .fragment-toggle {
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 24px 0;
-      width: 100%;
-      text-align: left;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-    }
-    .toggle-icon {
-      font-size: 18px;
-      color: #a8a095;
-      flex-shrink: 0;
-      line-height: 1;
-      transition: transform 0.3s ease;
-      font-weight: 300;
-    }
-    .fragment-toggle.is-open .toggle-icon { transform: rotate(45deg); }
-
-    .fragment-detail {
-      display: grid;
-      grid-template-rows: 0fr;
-      transition: grid-template-rows 0.5s ease;
-    }
-    .fragment-detail.is-open { grid-template-rows: 1fr; }
-    .fragment-detail > div { overflow: hidden; }
-
-    #scroll-indicator {
-      position: absolute;
-      bottom: 40px;
-      left: 50%;
-      transform: translateX(-50%);
-      opacity: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .frag-text {
-      font-family: 'Zen Old Mincho', 'Georgia', serif;
-      font-size: clamp(15px, 3.8vw, 20px);
-      color: #302c28;
-      line-height: 1.85;
-      letter-spacing: 0.04em;
-    }
-    .frag-sub {
-      display: block;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-size: clamp(10px, 2.5vw, 12px);
-      color: #a8a095;
-      letter-spacing: 0.03em;
-      margin-top: 2px;
-      font-weight: 400;
-      line-height: 1.4;
-    }
-    .frag-body {
-      font-family: Georgia, 'Times New Roman', serif;
-      font-size: 13px;
-      color: #5e5850;
-      line-height: 2.05;
-      letter-spacing: 0.01em;
-      margin: 0;
-      white-space: pre-line;
-    }
-    .frag-link {
-      font-family: Georgia, serif;
-      font-size: 11.5px;
-      color: #8f8780;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      text-decoration-color: rgba(160,152,140,0.4);
-    }
-    .frag-links { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 6px 16px; }
-    .frag-inner { padding: 0 0 28px 0; }
-    .pod-card { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; transition: opacity 0.25s ease; }
-    .pod-card:hover { opacity: 0.72; }
-    .pod-card img { width: 60px; height: 60px; border-radius: 4px; object-fit: cover; flex-shrink: 0; }
-    .pod-card span {
-      font-family: Georgia, serif;
-      font-size: 12px;
-      color: #706a62;
-      line-height: 1.65;
-      white-space: pre-line;
-    }
-    .pod-list { margin-top: 18px; display: flex; flex-direction: column; gap: 14px; }
-    .lang-switcher {
-      position: fixed;
-      top: 24px;
-      right: 24px;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-family: 'Zen Old Mincho','Yu Mincho',serif;
-      font-size: 11px;
-      letter-spacing: 0.2em;
-      padding: 9px 15px;
-      background: rgba(244,241,236,0.78);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border: 1px solid rgba(180,172,160,0.3);
-      border-radius: 2px;
-    }
-    .lang-switcher a { color: #8f8780; text-decoration: none; transition: color 0.3s ease; }
-    .lang-switcher a:hover { color: #302c28; }
-    .lang-switcher .current { color: #302c28; font-weight: 700; }
-    .lang-switcher .divider { color: #c4bdb2; }
-    @media (max-width: 640px) {
-      .lang-switcher { top: 14px; right: 14px; padding: 7px 12px; font-size: 10px; gap: 8px; }
-    }
-
-    .breath {
-      opacity: 0;
-      transform: translateY(16px);
-      transition: opacity 1.8s ease, transform 1.8s ease;
-    }
-    .breath.is-visible {
-      opacity: 1;
-      transform: none;
-    }
-    .breath-line-delayed {
-      opacity: 0;
-      transform: translateY(16px);
-      transition: opacity 1.8s ease 0.6s, transform 1.8s ease 0.6s;
-    }
-    .breath.is-visible .breath-line-delayed {
-      opacity: 1;
-      transform: none;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="./css/tokens.css">
+  <link rel="stylesheet" href="./css/site.css">
+  <script defer src="./js/site.js"></script>
 </head>
+
 <body>
 
-  <!-- LANGUAGE SWITCHER -->
-  <nav class="lang-switcher" aria-label="Language">
-    <a href="https://kagakawa.com/jp/" aria-label="日本語ページへ">JP</a>
-    <span class="divider" aria-hidden="true">/</span>
-    <span class="current" aria-current="page">EN</span>
-  </nav>
+  <div class="progress-line" aria-hidden="true"></div>
 
   <!-- HERO -->
   <section class="hero">
-    <div style="text-align:center;">
-      <p style="font-family:'Zen Old Mincho','Georgia',serif;font-size:clamp(20px,5vw,30px);font-weight:400;line-height:2.5;letter-spacing:0.08em;">
-        <span style="display:inline-block;opacity:0;color:#302c28;animation:line1 6s ease 0.5s forwards">Chased success,</span><br>
-        <span style="display:inline-block;opacity:0;color:#302c28;animation:line2 6s ease 1.2s forwards">chased truth —</span><br>
-        <span style="display:inline-block;opacity:0;color:#302c28;animation:line3 6s ease 1.9s forwards">and landed back in the everyday.</span>
-      </p>
+    <div class="hero-lines" aria-label="Chased success, chased truth — and landed back in the everyday.">
+      <p>Chased success,</p>
+      <p>chased truth —</p>
+      <p>and landed back in the everyday.</p>
     </div>
+    <svg class="hero-stroke" width="2" height="120" viewBox="0 0 2 120" aria-hidden="true">
+      <line x1="1" y1="0" x2="1" y2="120" stroke="currentColor" stroke-width="1" style="color:var(--c-stone-6);" />
+    </svg>
     <div id="scroll-indicator">
-      <span style="font-family:Georgia,serif;font-size:10px;color:#a8a095;letter-spacing:0.2em;">scroll</span>
+      <span>scroll</span>
       <div id="scroll-arrow">
-        <svg width="14" height="36" viewBox="0 0 14 36">
-          <line x1="7" y1="0" x2="7" y2="28" stroke="#a8a095" stroke-width="1"/>
-          <polyline points="2,24 7,30 12,24" stroke="#a8a095" stroke-width="1" fill="none"/>
+        <svg width="14" height="36" viewBox="0 0 14 36" aria-hidden="true">
+          <line x1="7" y1="0" x2="7" y2="28" stroke="currentColor" stroke-width="1" style="color:var(--c-stone-3);" />
+          <polyline points="2,24 7,30 12,24" stroke="currentColor" stroke-width="1" fill="none" style="color:var(--c-stone-3);" />
         </svg>
       </div>
     </div>
   </section>
 
-  <!-- NAME BLOCK -->
-  <section style="padding:80px 32px 0;max-width:640px;margin:0 auto;">
+  <!-- PRELUDE -->
+  <section class="prelude">
     <div class="name-block">
-      <p style="font-family:'Zen Old Mincho',serif;font-size:11px;color:#a8a095;letter-spacing:0.22em;margin-bottom:12px;">KAGAYAKI KAWABATA</p>
-      <h2 style="font-family:'Zen Old Mincho',serif;font-size:clamp(28px,7vw,44px);color:#302c28;font-weight:700;letter-spacing:0.1em;line-height:1.4;margin:0;">Kaga Kawabata</h2>
-      <p style="font-family:Georgia,serif;font-size:12px;color:#8f8780;margin-top:12px;letter-spacing:0.06em;">Podcaster / Executive Coach / Dad</p>
+      <p class="name-romaji">KAGAYAKI KAWABATA</p>
+      <h1 class="name-jp">Kaga Kawabata</h1>
+      <p class="name-role">Podcaster / Executive Coach / Dad</p>
     </div>
   </section>
 
-  <!-- TAGLINE -->
-  <section class="tagline" style="max-width:640px;margin:0 auto;padding:36px 32px 0;">
-    <p style="font-family:Georgia,serif;font-size:13.5px;color:#6b6560;line-height:2;letter-spacing:0.01em;">Beyond capitalist happiness — practicing "consciousness transformation" for the age of the singularity, through technology, Japanese culture, storytelling, daily life, and local community.</p>
+  <section class="tagline">
+    <p>Beyond capitalist happiness — practicing "consciousness transformation" for the age of the singularity, through technology, Japanese culture, storytelling, daily life, and local community.</p>
   </section>
 
-  <!-- FRAGMENTS -->
-  <main style="max-width:640px;margin:0 auto;padding:20px 32px 100px;">
+  <!-- MAIN NARRATIVE -->
+  <main class="main">
 
-    <!-- ── ZONE 1: I ── -->
-    <div class="zone-label" style="padding:80px 0 16px;">
-      <span style="font-family:'Zen Old Mincho',serif;font-size:15px;color:#c0b8ad;letter-spacing:0.2em;">I  Chasing success</span>
-    </div>
+    <!-- ── ZONE I: Chasing success ── -->
+    <section class="zone" id="zone-1">
+      <header class="zone-head">
+        <span class="zone-kanji" aria-hidden="true">一</span>
+        <span class="zone-sub">I  Chasing success</span>
+      </header>
+      <span class="zone-stroke" aria-hidden="true"></span>
 
-    <!-- z1-0 -->
-    <div class="fragment" style="transition:opacity 1s ease 0s,transform 1s ease 0s;">
-      <button class="fragment-toggle" onclick="toggleFragment(this)">
-        <span class="frag-text">Born where gunshots echoed through the streets</span>
-        <span class="toggle-icon">+</span>
-      </button>
-      <div class="fragment-detail"><div><div class="frag-inner">
-        <p class="frag-body">Born in a corner of Chicago where gunshots were part of daily life. Roots in Toyama. My father ran a Japanese restaurant in that same neighborhood, and I grew up watching "Japan" from the other side of his counter. What my parents told me, they told me only one thing — "make money." Somewhere along the way, those words turned into a vague, unshakable hunger for success.</p>
-      </div></div></div>
-    </div>
+      <div class="fragment">
+        <button class="fragment-toggle" aria-expanded="false" onclick="toggleFragment(this)">
+          <span class="frag-text">Born where gunshots echoed through the streets</span>
+          <span class="toggle-icon" aria-hidden="true"></span>
+        </button>
+        <div class="fragment-detail">
+          <div>
+            <div class="frag-inner">
+              <p class="frag-body">Born in a corner of Chicago where gunshots were part of daily life. Roots in Toyama. My father ran a Japanese restaurant in that same neighborhood, and I grew up watching "Japan" from the other side of his counter. What my parents told me, they told me only one thing — "make money." Somewhere along the way, those words turned into a vague, unshakable hunger for success.</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <!-- z1-1 -->
-    <div class="fragment" style="transition:opacity 1s ease 0.06s,transform 1s ease 0.06s;">
-      <button class="fragment-toggle" onclick="toggleFragment(this)">
-        <span class="frag-text">From a corporate career to a CEO's right hand, then founding his own</span>
-        <span class="toggle-icon">+</span>
-      </button>
-      <div class="fragment-detail"><div><div class="frag-inner">
-        <p class="frag-body">Drawn by a lifelong fascination with Japan, I joined Nomura Research Institute as a new grad. The way young people today look to Silicon Valley, Japan back then felt to me like the most innovative country in the world. But growing up too freely in America had left me completely out of sync with Japanese corporate culture — I quit after a year.
+      <div class="fragment">
+        <button class="fragment-toggle" aria-expanded="false" onclick="toggleFragment(this)">
+          <span class="frag-text">From corporate career, to a CEO's right hand, to founding my own</span>
+          <span class="toggle-icon" aria-hidden="true"></span>
+        </button>
+        <div class="fragment-detail">
+          <div>
+            <div class="frag-inner">
+              <p class="frag-body">Drawn by a lifelong fascination with Japan, I joined Nomura Research Institute as a new grad. The way young people today look to Silicon Valley, Japan back then felt to me like the most innovative country in the world. But growing up too freely in America had left me completely out of sync with Japanese corporate culture — I quit after a year.
 
 I went back to the US and earned a master's at business school. At the Boston Career Forum I met the president of BEENOS, was drawn to the way he carried himself as a founder, and threw myself into his office as his right hand. Meeting founder after founder as a VC associate, I could no longer contain my own urge to build.
 
 I left BEENOS, passed through the US programming bootcamp General Assembly, and finally founded my own company — a bento delivery service I shut down after foreseeing Uber Eats' expansion. The next move I chose was a matching app, in a space still viewed with suspicion as "that dating stuff." I co-founded it with a former NRI colleague.</p>
-      </div></div></div>
-    </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <!-- z1-2 -->
-    <div class="fragment" style="transition:opacity 1s ease 0.12s,transform 1s ease 0.12s;">
-      <button class="fragment-toggle" onclick="toggleFragment(this)">
-        <span class="frag-text">¥50 billion vanished overnight</span>
-        <span class="toggle-icon">+</span>
-      </button>
-      <div class="fragment-detail"><div><div class="frag-inner">
-        <p class="frag-body">Behind "I want to start something" was always a deeper hunger: I want to succeed. While running my own ventures, I began working with Coincheck — still just a handful of people. The founder was an exceptionally talented engineer. The account sign-up UX was simple and genuinely close to its users. When the market moved, this would win — I shut down my own services and went all in. As the second hire, I led international business development, marketing, HR, and web.
+      <div class="fragment">
+        <button class="fragment-toggle" aria-expanded="false" onclick="toggleFragment(this)">
+          <span class="frag-text">¥50 billion vanished overnight</span>
+          <span class="toggle-icon" aria-hidden="true"></span>
+        </button>
+        <div class="fragment-detail">
+          <div>
+            <div class="frag-inner">
+              <p class="frag-body">Behind "I want to start something" was always a deeper hunger: I want to succeed. While running my own ventures, I began working with Coincheck — still just a handful of people. The founder was an exceptionally talented engineer. The account sign-up UX was simple and genuinely close to its users. When the market moved, this would win — I shut down my own services and went all in. As the second hire, I led international business development, marketing, HR, and web.
 
 Every day was a tightrope walk. An endless mountain of tasks processed like a machine. Cryptocurrency had been dismissed as a scam until just recently — yet by selling nothing but electronic data, the company began earning hundreds of millions of yen a day. It felt like it would grow forever. My senses were going numb.
 
 Then one morning, ¥50 billion vanished overnight in a hack. Leading the international coordination to trace the stolen funds, one question kept circling in my head. We had only been chasing our own success. Was there any happiness in it for the users or the team? Could I even say I was happy myself?
 
 I left after the acquisition. When the illusion of money fell away, what remained in my hands was a question.</p>
-        <div class="frag-links">
-          <a href="https://blockchainindustrygroup.org/coincheck-japans-largest-cryptocurrency-exchange-bitcoin-payment-processor/" target="_blank" rel="noopener noreferrer" class="frag-link">Coincheck — Blockchain Industry Group</a>
-        </div>
-      </div></div></div>
-    </div>
-
-    <!-- z1-3 -->
-    <div class="fragment" style="transition:opacity 1s ease 0.18s,transform 1s ease 0.18s;">
-      <button class="fragment-toggle" onclick="toggleFragment(this)">
-        <span class="frag-text">Crossed the ocean chasing a bigger meaning</span>
-        <span class="toggle-icon">+</span>
-      </button>
-      <div class="fragment-detail"><div><div class="frag-inner">
-        <p class="frag-body">After the illusion of money fell apart, I wanted to meet people working for something larger than themselves, and crossed the ocean to Silicon Valley. I studied product design and management at Tradecraft, and supported startups in both the US and Japan.
-
-But what I actually saw was a world where financial success outweighed meaning. Funding rounds, inner circles, valuation games. An ecosystem where everyone said "make the world better" while making money came first. At heart, it was the same scenery I had already seen at Coincheck.
-
-I had lost interest in growing companies altogether. The only question that stayed with me was this: how do people actually become happy?</p>
-        <div class="frag-links">
-          <a href="https://note.com/futurehuman/n/nfea5ae39709f" target="_blank" rel="noopener noreferrer" class="frag-link">Silicon Valley diary (note)</a>
-        </div>
-      </div></div></div>
-    </div>
-
-    <!-- breath 1→2 -->
-    <div class="breath" style="padding:120px 0;text-align:center;">
-      <div style="width:40px;height:1px;background:rgba(143,135,128,0.25);margin:0 auto 32px;"></div>
-      <p style="font-family:'Zen Old Mincho','Georgia',serif;font-size:clamp(14px,3.5vw,16px);color:#8f8780;letter-spacing:0.12em;line-height:2.4;">Just for a moment, I held success in my hands.</p>
-      <p class="breath-line-delayed" style="font-family:'Zen Old Mincho','Georgia',serif;font-size:clamp(14px,3.5vw,16px);color:#8f8780;letter-spacing:0.12em;line-height:2.4;margin-top:4px;">But it left me unfulfilled.</p>
-    </div>
-
-    <!-- ── ZONE 2: II ── -->
-    <div class="zone-label" style="padding:80px 0 16px;">
-      <span style="font-family:'Zen Old Mincho',serif;font-size:15px;color:#c0b8ad;letter-spacing:0.2em;">II  Chasing truth</span>
-    </div>
-
-    <!-- z2-0 -->
-    <div class="fragment" style="transition:opacity 1s ease 0s,transform 1s ease 0s;">
-      <button class="fragment-toggle" onclick="toggleFragment(this)">
-        <span class="frag-text">Tried everything I ever wanted to</span>
-        <span class="toggle-icon">+</span>
-      </button>
-      <div class="fragment-detail"><div><div class="frag-inner">
-        <p class="frag-body">I set down both money and success for a while. There was no set path anymore. I released music on Spotify, devoured philosophy and cosmology — I simply did whatever I'd ever wanted to do.
-
-Maybe happiness isn't in outside approval, but somewhere inside me. The one who had pursued that question deepest, and longest, was the Buddha. I wanted to taste "awakening" through my own body.</p>
-      </div></div></div>
-    </div>
-
-    <!-- z2-1 -->
-    <div class="fragment" style="transition:opacity 1s ease 0.06s,transform 1s ease 0.06s;">
-      <button class="fragment-toggle" onclick="toggleFragment(this)">
-        <span class="frag-text">Twelve days without speaking to anyone</span>
-        <span class="toggle-icon">+</span>
-      </button>
-      <div class="fragment-detail"><div><div class="frag-inner">
-        <p class="frag-body">Twelve days of Vipassana meditation at Dhamma Dicchā. In total silence, I observed only what was happening inside me.
-
-I thought I had already let go. Of money, of success, of titles. And still something wasn't filled — the reason lived deeper. What had been driving me was a feeling of fear and anxiety: "If I don't succeed, I won't be seen." Wealth, fame, recognition — everything my twenties self had craved. I felt all of it drain away, quietly.
-
-From here, I want to live in the feeling of love. The one thing those twelve silent days gave me was that single point. Ever since, a morning meditation has stayed with me.</p>
-        <div class="frag-links">
-          <a href="https://note.com/futurehuman/n/n32259e5833fd" target="_blank" rel="noopener noreferrer" class="frag-link">My Vipassana retreat (note)</a>
-        </div>
-      </div></div></div>
-    </div>
-
-    <!-- z2-2 -->
-    <div class="fragment" style="transition:opacity 1s ease 0.12s,transform 1s ease 0.12s;">
-      <button class="fragment-toggle" onclick="toggleFragment(this)">
-        <span class="frag-text">Even solving social problems was ego</span>
-        <span class="toggle-icon">+</span>
-      </button>
-      <div class="fragment-detail"><div><div class="frag-inner">
-        <p class="frag-body">Walking forward in the feeling of love, I chose ExaWizards. I launched Well-being AI products there and went through its IPO from the inside. I joined believing we would solve social problems.
-
-But before I knew it, I was being pulled by the gravity of capitalism. The structure I had only watched from the outside in Silicon Valley — now I was inside it.
-
-And I noticed one more thing. Behind the goodwill of "solving social problems" sat a self that wanted to be recognized. That wasn't the love I had touched in Vipassana meditation.</p>
-        <div class="frag-links">
-          <a href="https://note.com/futurehuman/n/n4a0d86b4c42c" target="_blank" rel="noopener noreferrer" class="frag-link">About me (note)</a>
-        </div>
-      </div></div></div>
-    </div>
-
-    <!-- z2-3 -->
-    <div class="fragment" style="transition:opacity 1s ease 0.18s,transform 1s ease 0.18s;">
-      <button class="fragment-toggle" onclick="toggleFragment(this)">
-        <span class="frag-text">I explored Buddhism and AI — and ended up as a comedian.</span>
-        <span class="toggle-icon">+</span>
-      </button>
-      <div class="fragment-detail"><div><div class="frag-inner">
-        <p class="frag-body">Coaching kept teaching me one thing: by the time someone arrives at coaching, they have already stepped onto the path of transformation. The real question was the people still before that step.
-
-The answer I arrived at was comedy. I entered Titan's school and performed as comedian Kagayakiman. People notice the moment things tilt slightly off-center — and they laugh. I was climbing the same mountain as meditation and coaching, from a different trail.
-
-A life of testing ideas through play began here.</p>
-        <div class="frag-links">
-          <a href="https://www.youtube.com/watch?v=uLbldP4AGXY&t=4809s" target="_blank" rel="noopener noreferrer" class="frag-link">Kagayakiman YouTube</a>
-          <a href="https://note.com/futurehuman/n/nf21c24336ea3" target="_blank" rel="noopener noreferrer" class="frag-link">Why I joined comedy school (note)</a>
-        </div>
-      </div></div></div>
-    </div>
-
-    <!-- z2-4 -->
-    <div class="fragment" style="transition:opacity 1s ease 0.24s,transform 1s ease 0.24s;">
-      <button class="fragment-toggle" onclick="toggleFragment(this)">
-        <span class="frag-text">At the edge of death, I saw emptiness</span>
-        <span class="toggle-icon">+</span>
-      </button>
-      <div class="fragment-detail"><div><div class="frag-inner">
-        <p class="frag-body">In a program at the frontier of consciousness work, I had a near-death experience. What I saw at the border between this world and the next was emptiness — kū.
-
-Money, success, meaning — I had already let go of them all. Here I let go of even more: my body, and then even my breath. In a world that was nothing but consciousness, everything was there, and nothing was there.
-
-When I came back, the fact that I could breathe was a miracle. That my family was there was a miracle. Once I had tasted kū, the everyday began to shine.</p>
-        <div class="frag-links">
-          <a href="https://note.com/futurehuman/n/n55784b4fc56c" target="_blank" rel="noopener noreferrer" class="frag-link">Near-death experience (note)</a>
-        </div>
-      </div></div></div>
-    </div>
-
-    <!-- breath 2→3 -->
-    <div class="breath" style="padding:120px 0;text-align:center;">
-      <div style="width:40px;height:1px;background:rgba(143,135,128,0.25);margin:0 auto 32px;"></div>
-      <p style="font-family:'Zen Old Mincho','Georgia',serif;font-size:clamp(14px,3.5vw,16px);color:#8f8780;letter-spacing:0.12em;line-height:2.4;">Each time I let something go, what truly mattered came into view.</p>
-    </div>
-
-    <!-- ── ZONE 3: III ── -->
-    <div class="zone-label" style="padding:80px 0 16px;">
-      <span style="font-family:'Zen Old Mincho',serif;font-size:15px;color:#c0b8ad;letter-spacing:0.2em;">III  Back to the ordinary</span>
-    </div>
-
-    <!-- z3-0 -->
-    <div class="fragment" style="transition:opacity 1s ease 0s,transform 1s ease 0s;">
-      <button class="fragment-toggle" onclick="toggleFragment(this)">
-        <span class="frag-text">I came home to the everyday</span>
-        <span class="toggle-icon">+</span>
-      </button>
-      <div class="fragment-detail"><div><div class="frag-inner">
-        <p class="frag-body">Having seen emptiness, the place I came back to was the everyday. Not as a compromise. After chasing outward, diving inward, and letting it all go, I noticed that what was right in front of me was everything.
-
-We have entered an age where AI surpasses human intelligence. That is exactly why we need the strength to face our own inner world. When consciousness shifts, the way we live shifts. When the way we live shifts and we can hold the world at arm's length, more people are able to truly cherish the everyday in front of them. That is what my whole journey has taught me.</p>
-      </div></div></div>
-    </div>
-
-    <!-- z3-0b -->
-    <div class="fragment" style="transition:opacity 1s ease 0.03s,transform 1s ease 0.03s;">
-      <button class="fragment-toggle" onclick="toggleFragment(this)">
-        <span class="frag-text">Creating spaces for consciousness transformation</span>
-        <span class="toggle-icon">+</span>
-      </button>
-      <div class="fragment-detail"><div><div class="frag-inner">
-        <p class="frag-body">Chased success, chased truth, came home to the everyday. The journey taught me this: consciousness doesn't shift through information. Only through experience — facing conflict, being questioned in dialogue, sharing the same space — do people truly change.
-
-In the age of AI, these experiences need to be made on purpose.</p>
-      </div></div></div>
-    </div>
-
-    <!-- z3-1 -->
-    <div class="fragment" style="transition:opacity 1s ease 0.06s,transform 1s ease 0.06s;">
-      <button class="fragment-toggle" onclick="toggleFragment(this)">
-        <span class="frag-text">Running the family business<span class="frag-sub">ao.inc. / 9 beauty salons</span></span>
-        <span class="toggle-icon">+</span>
-      </button>
-      <div class="fragment-detail"><div><div class="frag-inner">
-        <p class="frag-body">My wife and I run ao. inc., which operates 9 beauty salons. No matter how far AI advances, the experience of human hands making someone more beautiful — of being cared for inside hospitality — cannot be replaced. The faster technology accelerates, the more value rises in the time humans spend facing humans. We are building, as a business, the spaces that make that time possible.</p>
-        <div class="frag-links">
-          <a href="https://ao-inc.company/" target="_blank" rel="noopener noreferrer" class="frag-link">ao. inc.</a>
-        </div>
-      </div></div></div>
-    </div>
-
-    <!-- z3-2 -->
-    <div class="fragment" style="transition:opacity 1s ease 0.12s,transform 1s ease 0.12s;">
-      <button class="fragment-toggle" onclick="toggleFragment(this)">
-        <span class="frag-text">Delivering it through the voice (podcasts)<span class="frag-sub">戦略的幸福論 / 超実践的ヒモ理論 / STORYS 人生物語</span></span>
-        <span class="toggle-icon">+</span>
-      </button>
-      <div class="fragment-detail"><div><div class="frag-inner">
-        <p class="frag-body">Stories, consciousness transformation, post-capitalism — the themes vary, but every show is built to deliver an entry point for noticing, through voice.</p>
-        <div class="pod-list">
-          <a href="https://open.spotify.com/show/4IT6zgmcXa4PL4HlvAnkCL?si=6a1dbf5cb0754e05&amp;nd" target="_blank" rel="noopener noreferrer" class="pod-card">
-            <img src="./pod-strategic.avif" alt="Strategic Happiness">
-            <span>Strategic Happiness&#10;— How to live in the age of AI —</span>
-          </a>
-          <a href="https://open.spotify.com/show/7ceyWzwydxB5Ycmj5jlkTp?si=786d3fbfd23b4496" target="_blank" rel="noopener noreferrer" class="pod-card">
-            <img src="./pod-himo.avif" alt="Post-Capitalist Kept-Man Theory">
-            <span>Post-Capitalist Kept-Man Theory&#10;— A practical guide to living after capitalism —</span>
-          </a>
-          <a href="https://open.spotify.com/show/5XJYg9A8Th17oR3D5uC67j?si=2506386665864b77" target="_blank" rel="noopener noreferrer" class="pod-card">
-            <img src="./pod-storys.avif" alt="STORYS — Life Stories">
-            <span>STORYS — Life Stories&#10;| Tell me your story.</span>
-          </a>
-        </div>
-        <div class="frag-links">
-          <a href="https://open.spotify.com/show/4IT6zgmcXa4PL4HlvAnkCL?si=6a1dbf5cb0754e05&amp;nd" target="_blank" rel="noopener noreferrer" class="frag-link">Strategic Happiness</a>
-          <a href="https://open.spotify.com/show/7ceyWzwydxB5Ycmj5jlkTp?si=786d3fbfd23b4496" target="_blank" rel="noopener noreferrer" class="frag-link">Post-Capitalist Kept-Man Theory</a>
-          <a href="https://open.spotify.com/show/5XJYg9A8Th17oR3D5uC67j?si=2506386665864b77" target="_blank" rel="noopener noreferrer" class="frag-link">STORYS — Life Stories</a>
-        </div>
-      </div></div></div>
-    </div>
-
-    <!-- z3-2b -->
-    <div class="fragment" style="transition:opacity 1s ease 0.15s,transform 1s ease 0.15s;">
-      <button class="fragment-toggle" onclick="toggleFragment(this)">
-        <span class="frag-text">Growing connection through voice<span class="frag-sub">STORYS Podcast Studio</span></span>
-        <span class="toggle-icon">+</span>
-      </button>
-      <div class="fragment-detail"><div><div class="frag-inner">
-        <p class="frag-body">A studio that supports podcast production from concept to release. We start by drawing out the host's own story through coaching, then carry it into voice. What we want to deliver isn't a polished show — it's content that shifts something in whoever listens.</p>
-        <div class="frag-links">
-          <a href="https://nexuspodcast.studio.site/" target="_blank" rel="noopener noreferrer" class="frag-link">STORYS Podcast Studio</a>
-        </div>
-      </div></div></div>
-    </div>
-
-    <!-- z3-3 -->
-    <div class="fragment" style="transition:opacity 1s ease 0.18s,transform 1s ease 0.18s;">
-      <button class="fragment-toggle" onclick="toggleFragment(this)">
-        <span class="frag-text">Mapping the moments of transformation from life stories<span class="frag-sub">株式会社和百八 / STORYS.JP</span></span>
-        <span class="toggle-icon">+</span>
-      </button>
-      <div class="fragment-detail"><div><div class="frag-inner">
-        <p class="frag-body">Founder and Director of WA108 Inc. We run STORYS.JP — a platform for telling, preserving, and delivering the stories behind people's lives. Through deep interviews, we capture the moments of transformation, then connect them to the next person's noticing.</p>
-        <div class="frag-links">
-          <a href="https://storys.jp" target="_blank" rel="noopener noreferrer" class="frag-link">STORYS.JP</a>
-        </div>
-      </div></div></div>
-    </div>
-
-    <!-- z3-4 -->
-    <div class="fragment" style="transition:opacity 1s ease 0.24s,transform 1s ease 0.24s;">
-      <button class="fragment-toggle" onclick="toggleFragment(this)">
-        <span class="frag-text">108 people helping each other<span class="frag-sub">STORYS STAND / Ikejiri-Ohashi</span></span>
-        <span class="toggle-icon">+</span>
-      </button>
-      <div class="fragment-detail"><div><div class="frag-inner">
-        <p class="frag-body">A 108-member private hub with a podcast studio, shared bookstore, and coworking space. Rolling out from Ikejiri-Ōhashi and Okinawa. A place where voice, books, and people cross paths — an ecosystem where consciousness transformation happens naturally.</p>
-        <div class="frag-links">
-          <a href="https://storyspodcasthub.vercel.app/" target="_blank" rel="noopener noreferrer" class="frag-link">STORYS STAND</a>
-        </div>
-      </div></div></div>
-    </div>
-
-    <!-- z3-5 -->
-    <div class="fragment" style="transition:opacity 1s ease 0.30s,transform 1s ease 0.30s;">
-      <button class="fragment-toggle" onclick="toggleFragment(this)">
-        <span class="frag-text">Growing a thousand-year forest<span class="frag-sub">SHINDO</span></span>
-        <span class="toggle-icon">+</span>
-      </button>
-      <div class="fragment-detail"><div><div class="frag-inner">
-        <p class="frag-body">SHINDO — a project co-creating a form of agriculture that grows a thousand-year forest. Joined as a founding member. Clothing, food, shelter, community, energy — produced with our own hands. Living out, from the soil up, the way of life that lies beyond consciousness transformation.</p>
-        <div class="frag-links">
-          <a href="https://shindoproject.com/" target="_blank" rel="noopener noreferrer" class="frag-link">SHINDO</a>
-        </div>
-      </div></div></div>
-    </div>
-
-    <!-- z3-6 -->
-    <div class="fragment" style="transition:opacity 1s ease 0.36s,transform 1s ease 0.36s;">
-      <button class="fragment-toggle" onclick="toggleFragment(this)">
-        <span class="frag-text">Accompanying AI's dramatic evolution from the inside<span class="frag-sub">Creative2 / AI Advisor</span></span>
-        <span class="toggle-icon">+</span>
-      </button>
-      <div class="fragment-detail"><div><div class="frag-inner">
-        <p class="frag-body">AI advisor at media company Creative2 since 2025. Accompanying and personally experiencing AI's rapid evolution from within the business.</p>
-      </div></div></div>
-    </div>
-
-    <!-- z3-7 -->
-    <div class="fragment" style="transition:opacity 1s ease 0.42s,transform 1s ease 0.42s;">
-      <button class="fragment-toggle" onclick="toggleFragment(this)">
-        <span class="frag-text">Dialogue with the inner world<span class="frag-sub">ICF Certified Coach</span></span>
-        <span class="toggle-icon">+</span>
-      </button>
-      <div class="fragment-detail"><div><div class="frag-inner">
-        <p class="frag-body">Meditation sparked my wish to deliver consciousness transformation. But meditation isn't the doorway for everyone. Dialogue lets people change on the extension of daily life. Because I once ran on fear and anxiety, noticed the ego, and returned to the feeling of love myself, I can sit with another person's inner transformation. Coaching is the quietest path to consciousness transformation — one person at a time.
-
-ICF-certified coach (ACC). 160+ cumulative clients, 500+ cumulative session hours (as of 2026-03-15).
-
-Past clients: seed–Series B founders / social entrepreneurs / former foreign-firm Japan CEOs / student founders / former PMs at big foreign IT firms / big-firm consultants / startup executives / CMOs of fast-growing startups / design-firm CEOs / design-firm executives / managers at big foreign entertainment firms / beauty company CEOs / engineering leads at mega-ventures / business leads at mega-ventures / freelancers / professional coaches / career counselors / comedians.</p>
-        <div class="frag-links">
-          <a href="https://kagakawa.notion.site/63d495c976034993b75506254a00edb9" target="_blank" rel="noopener noreferrer" class="frag-link">About coaching</a>
-        </div>
-      </div></div></div>
-    </div>
-
-  </main>
-
-  <!-- BACKGROUND & STRENGTHS -->
-  <section style="max-width:640px;margin:0 auto;padding:0 32px 80px;">
-    <div>
-      <p style="font-family:'Zen Old Mincho',serif;font-size:13px;color:#c0b8ad;letter-spacing:0.2em;margin:0;padding:56px 0 16px;">Notes</p>
-
-      <!-- Background -->
-      <div class="fragment" style="transition:opacity 1s ease 0s,transform 1s ease 0s;">
-        <button class="fragment-toggle" onclick="toggleFragment(this)">
-          <span class="frag-text">Background</span>
-          <span class="toggle-icon">+</span>
-        </button>
-        <div class="fragment-detail">
-          <div>
-            <div class="frag-inner">
-              <p style="font-family:Georgia,serif;font-size:13px;color:#302c28;line-height:1.9;margin:0 0 22px;letter-spacing:0.01em;">A technology-leaning generalist with founder experience.</p>
-              <!-- career timeline -->
-              <ul style="list-style:none;padding:0;margin:0 0 32px;font-family:Georgia,serif;font-size:13px;color:#6b6560;line-height:1.7;">
-                <li style="display:grid;grid-template-columns:92px 1fr;gap:14px;padding:11px 0;border-bottom:1px solid rgba(180,172,160,0.2);">
-                  <span style="font-size:12px;color:#a39a8e;font-variant-numeric:tabular-nums;letter-spacing:0.02em;">2026 — Now</span>
-                  <span><span style="color:#302c28;">WA108 (STORYS.JP)</span><span style="color:#8b857f;"> — Founder / Director</span></span>
-                </li>
-                <li style="display:grid;grid-template-columns:92px 1fr;gap:14px;padding:11px 0;border-bottom:1px solid rgba(180,172,160,0.2);">
-                  <span style="font-size:12px;color:#a39a8e;font-variant-numeric:tabular-nums;letter-spacing:0.02em;">2025 — Now</span>
-                  <span><span style="color:#302c28;">Creative2</span><span style="color:#8b857f;"> — AI Advisor</span></span>
-                </li>
-                <li style="display:grid;grid-template-columns:92px 1fr;gap:14px;padding:11px 0;border-bottom:1px solid rgba(180,172,160,0.2);">
-                  <span style="font-size:12px;color:#a39a8e;font-variant-numeric:tabular-nums;letter-spacing:0.02em;">2022 — Now</span>
-                  <span><span style="color:#302c28;">ao. inc.</span><span style="color:#8b857f;"> — Director</span></span>
-                </li>
-                <li style="display:grid;grid-template-columns:92px 1fr;gap:14px;padding:11px 0;border-bottom:1px solid rgba(180,172,160,0.2);">
-                  <span style="font-size:12px;color:#a39a8e;font-variant-numeric:tabular-nums;letter-spacing:0.02em;">2022 — Now</span>
-                  <span><span style="color:#302c28;">G's Academy</span><span style="color:#8b857f;"> — Mentor</span></span>
-                </li>
-                <li style="display:grid;grid-template-columns:92px 1fr;gap:14px;padding:11px 0;border-bottom:1px solid rgba(180,172,160,0.2);">
-                  <span style="font-size:12px;color:#a39a8e;font-variant-numeric:tabular-nums;letter-spacing:0.02em;">2020 – 2024</span>
-                  <span><span style="color:#302c28;">ExaWizards</span><span style="color:#8b857f;"> — Product Manager / UX Designer</span></span>
-                </li>
-                <li style="display:grid;grid-template-columns:92px 1fr;gap:14px;padding:11px 0;border-bottom:1px solid rgba(180,172,160,0.2);">
-                  <span style="font-size:12px;color:#a39a8e;font-variant-numeric:tabular-nums;letter-spacing:0.02em;">2018 – 2019</span>
-                  <span><span style="color:#302c28;">BoostIO (IssueHunt)</span><span style="color:#8b857f;"> — COO / UI-UX Designer / Growth</span></span>
-                </li>
-                <li style="display:grid;grid-template-columns:92px 1fr;gap:14px;padding:11px 0;border-bottom:1px solid rgba(180,172,160,0.2);">
-                  <span style="font-size:12px;color:#a39a8e;font-variant-numeric:tabular-nums;letter-spacing:0.02em;">2018</span>
-                  <span><span style="color:#302c28;">Tradecraft</span><span style="color:#8b857f;"> — Product Designer (San Francisco)</span></span>
-                </li>
-                <li style="display:grid;grid-template-columns:92px 1fr;gap:14px;padding:11px 0;border-bottom:1px solid rgba(180,172,160,0.2);">
-                  <span style="font-size:12px;color:#a39a8e;font-variant-numeric:tabular-nums;letter-spacing:0.02em;">2016 – 2018</span>
-                  <span><span style="color:#302c28;">Coincheck</span><span style="color:#8b857f;"> — 2nd Hire → Global Alliance Lead → Advisor</span></span>
-                </li>
-                <li style="display:grid;grid-template-columns:92px 1fr;gap:14px;padding:11px 0;border-bottom:1px solid rgba(180,172,160,0.2);">
-                  <span style="font-size:12px;color:#a39a8e;font-variant-numeric:tabular-nums;letter-spacing:0.02em;">2015 — Now</span>
-                  <span><span style="color:#302c28;">Independent</span><span style="color:#8b857f;"> — PM, Executive Coach, Angel Investor, AI Advisor, Podcaster</span></span>
-                </li>
-                <li style="display:grid;grid-template-columns:92px 1fr;gap:14px;padding:11px 0;border-bottom:1px solid rgba(180,172,160,0.2);">
-                  <span style="font-size:12px;color:#a39a8e;font-variant-numeric:tabular-nums;letter-spacing:0.02em;">2015</span>
-                  <span><span style="color:#302c28;">Samurai Engineer Bootcamp</span><span style="color:#8b857f;"> — Instructor</span></span>
-                </li>
-                <li style="display:grid;grid-template-columns:92px 1fr;gap:14px;padding:11px 0;border-bottom:1px solid rgba(180,172,160,0.2);">
-                  <span style="font-size:12px;color:#a39a8e;font-variant-numeric:tabular-nums;letter-spacing:0.02em;">2014 – 2016</span>
-                  <span><span style="color:#302c28;">HACKMAI (Chicago) / BRIGHT CLASS (Tokyo)</span><span style="color:#8b857f;"> — Founder (Chicago)</span></span>
-                </li>
-                <li style="display:grid;grid-template-columns:92px 1fr;gap:14px;padding:11px 0;border-bottom:1px solid rgba(180,172,160,0.2);">
-                  <span style="font-size:12px;color:#a39a8e;font-variant-numeric:tabular-nums;letter-spacing:0.02em;">2013 – 2014</span>
-                  <span><span style="color:#302c28;">BEENOS</span><span style="color:#8b857f;"> — Venture Investment Associate</span></span>
-                </li>
-                <li style="display:grid;grid-template-columns:92px 1fr;gap:14px;padding:11px 0;">
-                  <span style="font-size:12px;color:#a39a8e;font-variant-numeric:tabular-nums;letter-spacing:0.02em;">2010 – 2011</span>
-                  <span><span style="color:#302c28;">Nomura Research Institute</span><span style="color:#8b857f;"> — System Analyst</span></span>
-                </li>
-              </ul>
-              <h4 style="font-family:'Zen Old Mincho',serif;font-size:12px;color:#8b857f;letter-spacing:0.18em;font-weight:normal;margin:0 0 14px;">Skills</h4>
-              <div style="display:flex;flex-wrap:wrap;gap:8px 12px;font-family:Georgia,serif;font-size:12px;color:#8b857f;line-height:1.6;">
-                <span>New business development</span>
-                <span style="color:#c0b8ad;">/</span>
-                <span>Product manager</span>
-                <span style="color:#c0b8ad;">/</span>
-                <span>Digital product designer</span>
-                <span style="color:#c0b8ad;">/</span>
-                <span>Web development</span>
-                <span style="color:#c0b8ad;">/</span>
-                <span>Venture investing</span>
-                <span style="color:#c0b8ad;">/</span>
-                <span>AI advisor</span>
+              <div class="frag-links">
+                <a href="https://blockchainindustrygroup.org/coincheck-japans-largest-cryptocurrency-exchange-bitcoin-payment-processor/"
+                  target="_blank" rel="noopener noreferrer" class="frag-link">Coincheck — Blockchain Industry Group</a>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Strengths -->
-      <div class="fragment" style="transition:opacity 1s ease 0.06s,transform 1s ease 0.06s;">
-        <button class="fragment-toggle" onclick="toggleFragment(this)">
-          <span class="frag-text">Strengths</span>
-          <span class="toggle-icon">+</span>
+      <div class="fragment">
+        <button class="fragment-toggle" aria-expanded="false" onclick="toggleFragment(this)">
+          <span class="frag-text">Crossed the ocean chasing a bigger meaning</span>
+          <span class="toggle-icon" aria-hidden="true"></span>
         </button>
         <div class="fragment-detail">
           <div>
             <div class="frag-inner">
-              <ul style="list-style:none;padding:0;margin:0;font-family:Georgia,serif;font-size:13px;color:#6b6560;line-height:1.9;">
-                <li style="margin-bottom:18px;"><span style="color:#302c28;">Futuristic</span><br><span style="font-size:12px;color:#8b857f;">Inspires others with visions of the future.</span></li>
-                <li style="margin-bottom:18px;"><span style="color:#302c28;">Ideation</span><br><span style="font-size:12px;color:#8b857f;">Finds connections between seemingly disparate phenomena.</span></li>
-                <li style="margin-bottom:18px;"><span style="color:#302c28;">Individualization</span><br><span style="font-size:12px;color:#8b857f;">Brings teams together through each person's uniqueness.</span></li>
-                <li style="margin-bottom:18px;"><span style="color:#302c28;">Learner</span><br><span style="font-size:12px;color:#8b857f;">Finds meaning in learning itself, more than in outcomes.</span></li>
-                <li style="margin-bottom:18px;"><span style="color:#302c28;">Restorative</span><br><span style="font-size:12px;color:#8b857f;">Locates the source of problems and resolves them.</span></li>
-              </ul>
+              <p class="frag-body">After the illusion of money fell apart, I wanted to meet people working for something larger than themselves, and crossed the ocean to Silicon Valley. I studied product design and management at Tradecraft, and supported startups in both the US and Japan.
+
+But what I actually saw was a world where financial success outweighed meaning. Funding rounds, inner circles, valuation games. An ecosystem where everyone said "make the world better" while making money came first. At heart, it was the same scenery I had already seen at Coincheck.
+
+I had lost interest in growing companies altogether. The only question that stayed with me was this: how do people actually become happy?</p>
+              <div class="frag-links">
+                <a href="https://note.com/futurehuman/n/nfea5ae39709f" target="_blank" rel="noopener noreferrer"
+                  class="frag-link">Silicon Valley diary (note)</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- breath 1→2 -->
+    <section class="breath" aria-hidden="false">
+      <svg class="breath-stroke" width="56" height="2" viewBox="0 0 56 2" aria-hidden="true">
+        <line x1="0" y1="1" x2="56" y2="1" />
+      </svg>
+      <p>Just for a moment, I held success in my hands.</p>
+      <p>But it left me unfulfilled.</p>
+    </section>
+
+    <!-- ── ZONE II: Chasing truth ── -->
+    <section class="zone" id="zone-2">
+      <header class="zone-head">
+        <span class="zone-kanji" aria-hidden="true">二</span>
+        <span class="zone-sub">II  Chasing truth</span>
+      </header>
+      <span class="zone-stroke" aria-hidden="true"></span>
+
+      <div class="fragment">
+        <button class="fragment-toggle" aria-expanded="false" onclick="toggleFragment(this)">
+          <span class="frag-text">Tried everything I'd ever wanted to</span>
+          <span class="toggle-icon" aria-hidden="true"></span>
+        </button>
+        <div class="fragment-detail">
+          <div>
+            <div class="frag-inner">
+              <p class="frag-body">I set down both money and success for a while. There was no set path anymore. I released music on Spotify, devoured philosophy and cosmology — I simply did whatever I'd ever wanted to do.
+
+Maybe happiness isn't in outside approval, but somewhere inside me. The one who had pursued that question deepest, and longest, was the Buddha. I wanted to taste "awakening" through my own body.</p>
             </div>
           </div>
         </div>
       </div>
 
-    </div>
-  </section>
+      <div class="fragment">
+        <button class="fragment-toggle" aria-expanded="false" onclick="toggleFragment(this)">
+          <span class="frag-text">Twelve days without speaking to anyone</span>
+          <span class="toggle-icon" aria-hidden="true"></span>
+        </button>
+        <div class="fragment-detail">
+          <div>
+            <div class="frag-inner">
+              <p class="frag-body">Twelve days of Vipassana meditation at Dhamma Dicchā. In total silence, I observed only what was happening inside me.
 
-  <!-- CONTACT / FOOTER -->
-  <footer style="max-width:640px;margin:0 auto;padding:0 32px 120px;">
-    <div style="padding-top:48px;">
-      <p style="font-family:'Zen Old Mincho',serif;font-size:clamp(17px,4vw,22px);color:#302c28;letter-spacing:0.06em;line-height:1.8;margin-bottom:40px;">If this resonates, say hi.</p>
+I thought I had already let go. Of money, of success, of titles. And still something wasn't filled — the reason lived deeper. What had been driving me was a feeling of fear and anxiety: "If I don't succeed, I won't be seen." Wealth, fame, recognition — everything my twenties self had craved. I felt all of it drain away, quietly.
 
-      <div style="display:flex;flex-wrap:wrap;gap:10px 22px;margin-bottom:40px;">
-        <a href="https://twitter.com/kagayakimann" target="_blank" rel="noopener noreferrer" style="font-family:Georgia,serif;font-size:13px;color:#6b6560;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(160,152,140,0.4);">𝕏</a>
-        <a href="https://instagram.com/kagayakiman" target="_blank" rel="noopener noreferrer" style="font-family:Georgia,serif;font-size:13px;color:#6b6560;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(160,152,140,0.4);">Instagram</a>
-        <a href="https://www.linkedin.com/in/kagakawabata" target="_blank" rel="noopener noreferrer" style="font-family:Georgia,serif;font-size:13px;color:#6b6560;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(160,152,140,0.4);">LinkedIn</a>
-        <a href="https://m.facebook.com/profile.php?id=100000652354295" target="_blank" rel="noopener noreferrer" style="font-family:Georgia,serif;font-size:13px;color:#6b6560;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(160,152,140,0.4);">Facebook</a>
-        <a href="https://note.com/futurehuman" target="_blank" rel="noopener noreferrer" style="font-family:Georgia,serif;font-size:13px;color:#6b6560;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(160,152,140,0.4);">note</a>
-        <a href="https://www.messenger.com/t/kagakawa" target="_blank" rel="noopener noreferrer" style="font-family:Georgia,serif;font-size:13px;color:#6b6560;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(160,152,140,0.4);">Messenger</a>
+From here, I want to live in the feeling of love. The one thing those twelve silent days gave me was that single point. Ever since, a morning meditation has stayed with me.</p>
+              <div class="frag-links">
+                <a href="https://note.com/futurehuman/n/n32259e5833fd" target="_blank" rel="noopener noreferrer"
+                  class="frag-link">My Vipassana retreat (note)</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div style="display:flex;flex-wrap:wrap;gap:10px 22px;margin-bottom:40px;">
-        <a href="https://open.spotify.com/show/4IT6zgmcXa4PL4HlvAnkCL?si=6a1dbf5cb0754e05&amp;nd" target="_blank" rel="noopener noreferrer" style="font-family:Georgia,serif;font-size:13px;color:#6b6560;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(160,152,140,0.4);">Podcast｜Strategic Happiness</a>
-        <a href="https://open.spotify.com/show/7ceyWzwydxB5Ycmj5jlkTp?si=786d3fbfd23b4496" target="_blank" rel="noopener noreferrer" style="font-family:Georgia,serif;font-size:13px;color:#6b6560;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(160,152,140,0.4);">Podcast｜Post-Capitalist Kept-Man Theory</a>
-        <a href="https://open.spotify.com/show/5XJYg9A8Th17oR3D5uC67j?si=2506386665864b77" target="_blank" rel="noopener noreferrer" style="font-family:Georgia,serif;font-size:13px;color:#6b6560;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(160,152,140,0.4);">Podcast｜STORYS — Life Stories</a>
+      <div class="fragment">
+        <button class="fragment-toggle" aria-expanded="false" onclick="toggleFragment(this)">
+          <span class="frag-text">Even solving social problems was ego</span>
+          <span class="toggle-icon" aria-hidden="true"></span>
+        </button>
+        <div class="fragment-detail">
+          <div>
+            <div class="frag-inner">
+              <p class="frag-body">Walking forward in the feeling of love, I chose ExaWizards. I launched Well-being AI products there and went through its IPO from the inside. I joined believing we would solve social problems.
+
+But before I knew it, I was being pulled by the gravity of capitalism. The structure I had only watched from the outside in Silicon Valley — now I was inside it.
+
+And I noticed one more thing. Behind the goodwill of "solving social problems" sat a self that wanted to be recognized. That wasn't the love I had touched in Vipassana meditation.</p>
+              <div class="frag-links">
+                <a href="https://note.com/futurehuman/n/n4a0d86b4c42c" target="_blank" rel="noopener noreferrer"
+                  class="frag-link">About me (note)</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div style="display:flex;flex-wrap:wrap;gap:10px 22px;margin-bottom:40px;">
-        <a href="https://ao-inc.company/" target="_blank" rel="noopener noreferrer" style="font-family:Georgia,serif;font-size:13px;color:#6b6560;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(160,152,140,0.4);">ao inc.</a>
-        <a href="https://www.storys.jp/" target="_blank" rel="noopener noreferrer" style="font-family:Georgia,serif;font-size:13px;color:#6b6560;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(160,152,140,0.4);">STORYS.JP</a>
+      <div class="fragment">
+        <button class="fragment-toggle" aria-expanded="false" onclick="toggleFragment(this)">
+          <span class="frag-text">Exploring Buddhism and AI, I ended up a comedian.</span>
+          <span class="toggle-icon" aria-hidden="true"></span>
+        </button>
+        <div class="fragment-detail">
+          <div>
+            <div class="frag-inner">
+              <p class="frag-body">Coaching kept teaching me one thing: by the time someone arrives at coaching, they have already stepped onto the path of transformation. The real question was the people still before that step.
+
+The answer I arrived at was comedy. I entered Titan's school and performed as comedian Kagayakiman. People notice the moment things tilt slightly off-center — and they laugh. I was climbing the same mountain as meditation and coaching, from a different trail.
+
+A life of testing ideas through play began here.</p>
+              <div class="frag-links">
+                <a href="https://www.youtube.com/watch?v=uLbldP4AGXY&t=4809s" target="_blank" rel="noopener noreferrer"
+                  class="frag-link">Kagayakiman YouTube</a>
+                <a href="https://note.com/futurehuman/n/nf21c24336ea3" target="_blank" rel="noopener noreferrer"
+                  class="frag-link">Why I joined comedy school (note)</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div style="display:flex;flex-wrap:wrap;gap:6px 18px;">
-        <a href="https://gsacademy.jp/" target="_blank" rel="noopener noreferrer" style="font-family:Georgia,serif;font-size:11px;color:#a8a095;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(160,152,140,0.35);">G's Academy mentor</a>
-        <a href="https://angl.jp/kagakawa" target="_blank" rel="noopener noreferrer" style="font-family:Georgia,serif;font-size:11px;color:#a8a095;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(160,152,140,0.35);">Angel investing</a>
-        <a href="https://note.com/futurehuman/n/n4a0d86b4c42c" target="_blank" rel="noopener noreferrer" style="font-family:Georgia,serif;font-size:11px;color:#a8a095;text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(160,152,140,0.35);">About me (note)</a>
+      <div class="fragment">
+        <button class="fragment-toggle" aria-expanded="false" onclick="toggleFragment(this)">
+          <span class="frag-text">At the edge of death, I saw kū (emptiness)</span>
+          <span class="toggle-icon" aria-hidden="true"></span>
+        </button>
+        <div class="fragment-detail">
+          <div>
+            <div class="frag-inner">
+              <p class="frag-body">In a program at the frontier of consciousness work, I had a near-death experience. What I saw at the border between this world and the next was emptiness — kū.
+
+Money, success, meaning — I had already let go of them all. Here I let go of even more: my body, and then even my breath. In a world that was nothing but consciousness, everything was there, and nothing was there.
+
+When I came back, the fact that I could breathe was a miracle. That my family was there was a miracle. Once I had tasted kū, the everyday began to shine.</p>
+              <div class="frag-links">
+                <a href="https://note.com/futurehuman/n/n55784b4fc56c" target="_blank" rel="noopener noreferrer"
+                  class="frag-link">Near-death experience (note)</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- breath 2→3 -->
+    <section class="breath" aria-hidden="false">
+      <svg class="breath-stroke" width="56" height="2" viewBox="0 0 56 2" aria-hidden="true">
+        <line x1="0" y1="1" x2="56" y2="1" />
+      </svg>
+      <p>Each time I let something go, what truly mattered came into view.</p>
+    </section>
+
+    <!-- ── ZONE III: Back to the everyday ── -->
+    <section class="zone" id="zone-3">
+      <header class="zone-head">
+        <span class="zone-kanji" aria-hidden="true">三</span>
+        <span class="zone-sub">III  Back to the everyday</span>
+      </header>
+      <span class="zone-stroke" aria-hidden="true"></span>
+
+      <div class="fragment">
+        <button class="fragment-toggle" aria-expanded="false" onclick="toggleFragment(this)">
+          <span class="frag-text">I came home to the everyday</span>
+          <span class="toggle-icon" aria-hidden="true"></span>
+        </button>
+        <div class="fragment-detail">
+          <div>
+            <div class="frag-inner">
+              <p class="frag-body">Having seen emptiness, the place I came back to was the everyday. Not as a compromise. After chasing outward, diving inward, and letting it all go, I noticed that what was right in front of me was everything.
+
+We have entered an age where AI surpasses human intelligence. That is exactly why we need the strength to face our own inner world. When consciousness shifts, the way we live shifts. When the way we live shifts and we can hold the world at arm's length, more people are able to truly cherish the everyday in front of them. That is what my whole journey has taught me.</p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div style="margin-top:100px;display:flex;flex-direction:column;align-items:flex-start;gap:26px;">
-        <img src="./profile.jpg" alt="Kaga Kawabata" style="width:88px;height:88px;border-radius:50%;object-fit:cover;filter:grayscale(0.15);">
-        <div style="display:flex;align-items:center;gap:14px;">
-          <p style="font-family:'Zen Old Mincho',serif;font-size:10px;color:#c0b8ad;letter-spacing:0.18em;margin:0;">KAGAYAKI KAWABATA</p>
-          <img src="./kagakawa-hanko.png" alt="Seal" style="width:44px;height:44px;opacity:0.85;">
+      <div class="fragment">
+        <button class="fragment-toggle" aria-expanded="false" onclick="toggleFragment(this)">
+          <span class="frag-text">Creating spaces for consciousness transformation</span>
+          <span class="toggle-icon" aria-hidden="true"></span>
+        </button>
+        <div class="fragment-detail">
+          <div>
+            <div class="frag-inner">
+              <p class="frag-body">Chased success, chased truth, came home to the everyday. The journey taught me this: consciousness doesn't shift through information. Only through experience — facing conflict, being questioned in dialogue, sharing the same space — do people truly change.
+
+In the age of AI, these experiences need to be made on purpose.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- breath 3 — Return → Practice -->
+    <section class="breath" aria-hidden="false">
+      <svg class="breath-stroke" width="56" height="2" viewBox="0 0 56 2" aria-hidden="true">
+        <line x1="0" y1="1" x2="56" y2="1" />
+      </svg>
+      <p>Here. Now.</p>
+    </section>
+
+    <!-- ── Chapter: Practice ── -->
+    <section class="chapter" id="practices">
+      <span class="chapter-sub">Present practice</span>
+      <h2 class="chapter-title">Practice</h2>
+    </section>
+
+    <!-- ── CLUSTER: Daily life ── -->
+    <section class="cluster">
+      <header class="cluster-head">
+        <span class="cluster-kanji" aria-hidden="true">暮</span>
+        <span class="cluster-en">KURASHI — daily life</span>
+      </header>
+
+      <div class="fragment">
+        <button class="fragment-toggle" aria-expanded="false" onclick="toggleFragment(this)">
+          <span class="frag-text">Running the family business<span class="frag-sub">ao. inc. / 9 beauty salons</span></span>
+          <span class="toggle-icon" aria-hidden="true"></span>
+        </button>
+        <div class="fragment-detail">
+          <div>
+            <div class="frag-inner">
+              <p class="frag-body">My wife and I run ao. inc., which operates 9 beauty salons. No matter how far AI advances, the experience of human hands making someone more beautiful — of being cared for inside hospitality — cannot be replaced. The faster technology accelerates, the more value rises in the time humans spend facing humans. We are building, as a business, the spaces that make that time possible.</p>
+              <div class="frag-links">
+                <a href="https://ao-inc.company/" target="_blank" rel="noopener noreferrer" class="frag-link">ao. inc.</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fragment">
+        <button class="fragment-toggle" aria-expanded="false" onclick="toggleFragment(this)">
+          <span class="frag-text">Growing a thousand-year forest<span class="frag-sub">SHINDO</span></span>
+          <span class="toggle-icon" aria-hidden="true"></span>
+        </button>
+        <div class="fragment-detail">
+          <div>
+            <div class="frag-inner">
+              <p class="frag-body">SHINDO — a project co-creating a form of agriculture that grows a thousand-year forest. Joined as a founding member. Clothing, food, shelter, community, energy — produced with our own hands. Living out, from the soil up, the way of life that lies beyond consciousness transformation.</p>
+              <div class="frag-links">
+                <a href="https://shindoproject.com/" target="_blank" rel="noopener noreferrer"
+                  class="frag-link">SHINDO</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CLUSTER: Voice ── -->
+    <section class="cluster">
+      <header class="cluster-head">
+        <span class="cluster-kanji" aria-hidden="true">声</span>
+        <span class="cluster-en">KOE — voice</span>
+      </header>
+
+      <div class="fragment">
+        <button class="fragment-toggle" aria-expanded="false" onclick="toggleFragment(this)">
+          <span class="frag-text">Delivering it through voice (podcasts)<span class="frag-sub">Strategic Happiness / Post-Capitalist Kept-Man Theory / STORYS — Life Stories</span></span>
+          <span class="toggle-icon" aria-hidden="true"></span>
+        </button>
+        <div class="fragment-detail">
+          <div>
+            <div class="frag-inner">
+              <p class="frag-body">Stories, consciousness transformation, post-capitalism — the themes vary, but every show is built to deliver an entry point for noticing, through voice.</p>
+              <div class="pod-list">
+                <a href="https://open.spotify.com/show/4IT6zgmcXa4PL4HlvAnkCL?si=6a1dbf5cb0754e05&amp;nd" target="_blank"
+                  rel="noopener noreferrer" class="pod-card">
+                  <img src="./pod-strategic.avif" alt="Strategic Happiness" loading="lazy">
+                  <span>Strategic Happiness&#10;— How to live in the age of AI —</span>
+                </a>
+                <a href="https://open.spotify.com/show/7ceyWzwydxB5Ycmj5jlkTp?si=786d3fbfd23b4496" target="_blank"
+                  rel="noopener noreferrer" class="pod-card">
+                  <img src="./pod-himo.avif" alt="Post-Capitalist Kept-Man Theory" loading="lazy">
+                  <span>Post-Capitalist Kept-Man Theory&#10;— A practical guide to living after capitalism —</span>
+                </a>
+                <a href="https://open.spotify.com/show/5XJYg9A8Th17oR3D5uC67j?si=2506386665864b77" target="_blank"
+                  rel="noopener noreferrer" class="pod-card">
+                  <img src="./pod-storys.avif" alt="STORYS — Life Stories" loading="lazy">
+                  <span>STORYS — Life Stories&#10;| Tell me your story.</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fragment">
+        <button class="fragment-toggle" aria-expanded="false" onclick="toggleFragment(this)">
+          <span class="frag-text">Growing connection through voice<span class="frag-sub">STORYS Podcast Studio</span></span>
+          <span class="toggle-icon" aria-hidden="true"></span>
+        </button>
+        <div class="fragment-detail">
+          <div>
+            <div class="frag-inner">
+              <p class="frag-body">A studio that supports podcast production from concept to release. We start by drawing out the host's own story through coaching, then carry it into voice. What we want to deliver isn't a polished show — it's content that shifts something in whoever listens.</p>
+              <div class="frag-links">
+                <a href="https://nexuspodcast.studio.site/" target="_blank" rel="noopener noreferrer" class="frag-link">STORYS Podcast Studio</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CLUSTER: Story ── -->
+    <section class="cluster">
+      <header class="cluster-head">
+        <span class="cluster-kanji" aria-hidden="true">物</span>
+        <span class="cluster-en">MONOGATARI — story</span>
+      </header>
+
+      <div class="fragment">
+        <button class="fragment-toggle" aria-expanded="false" onclick="toggleFragment(this)">
+          <span class="frag-text">Mapping moments of transformation from life stories<span class="frag-sub">WA108 Inc. / STORYS.JP</span></span>
+          <span class="toggle-icon" aria-hidden="true"></span>
+        </button>
+        <div class="fragment-detail">
+          <div>
+            <div class="frag-inner">
+              <p class="frag-body">Founder and Director of WA108 Inc. We run STORYS.JP — a platform for telling, preserving, and delivering the stories behind people's lives. Through deep interviews, we capture the moments of transformation, then connect them to the next person's noticing.</p>
+              <div class="frag-links">
+                <a href="https://storys.jp" target="_blank" rel="noopener noreferrer" class="frag-link">STORYS.JP</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fragment">
+        <button class="fragment-toggle" aria-expanded="false" onclick="toggleFragment(this)">
+          <span class="frag-text">108 people helping each other<span class="frag-sub">STORYS STAND / Ikejiri-Ōhashi</span></span>
+          <span class="toggle-icon" aria-hidden="true"></span>
+        </button>
+        <div class="fragment-detail">
+          <div>
+            <div class="frag-inner">
+              <p class="frag-body">A 108-member private hub with a podcast studio, shared bookstore, and coworking space. Rolling out from Ikejiri-Ōhashi and Okinawa. A place where voice, books, and people cross paths — an ecosystem where consciousness transformation happens naturally.</p>
+              <div class="frag-links">
+                <a href="https://storyspodcasthub.vercel.app/" target="_blank" rel="noopener noreferrer"
+                  class="frag-link">STORYS STAND</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CLUSTER: Dialogue ── -->
+    <section class="cluster">
+      <header class="cluster-head">
+        <span class="cluster-kanji" aria-hidden="true">対</span>
+        <span class="cluster-en">TAIWA — dialogue</span>
+      </header>
+
+      <div class="fragment">
+        <button class="fragment-toggle" aria-expanded="false" onclick="toggleFragment(this)">
+          <span class="frag-text">Dialogue with the inner world<span class="frag-sub">ICF-certified coach</span></span>
+          <span class="toggle-icon" aria-hidden="true"></span>
+        </button>
+        <div class="fragment-detail">
+          <div>
+            <div class="frag-inner">
+              <p class="frag-body">Meditation sparked my wish to deliver consciousness transformation. But meditation isn't the doorway for everyone. Dialogue lets people change on the extension of daily life. Because I once ran on fear and anxiety, noticed the ego, and returned to the feeling of love myself, I can sit with another person's inner transformation. Coaching is the quietest path to consciousness transformation — one person at a time.
+
+ICF-certified coach (ACC). 160+ cumulative clients, 500+ cumulative session hours (as of 2026-03-15).
+
+Past clients: seed–Series B founders / social entrepreneurs / former foreign-firm Japan CEOs / student founders / former PMs at big foreign IT firms / big-firm consultants / startup executives / CMOs of fast-growing startups / design-firm CEOs / design-firm executives / managers at big foreign entertainment firms / beauty company CEOs / engineering leads at mega-ventures / business leads at mega-ventures / freelancers / professional coaches / career counselors / comedians.</p>
+              <a class="cta-card" href="https://kagakawa.notion.site/63d495c976034993b75506254a00edb9" target="_blank" rel="noopener noreferrer">
+                <span class="cta-title">Walking coaching — book a session <span class="cta-arrow" aria-hidden="true">→</span></span>
+                <span class="cta-sub">One quiet hour, side by side. Learn more about coaching.</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CLUSTER: Era ── -->
+    <section class="cluster">
+      <header class="cluster-head">
+        <span class="cluster-kanji" aria-hidden="true">時</span>
+        <span class="cluster-en">JIDAI — era</span>
+      </header>
+
+      <div class="fragment">
+        <button class="fragment-toggle" aria-expanded="false" onclick="toggleFragment(this)">
+          <span class="frag-text">Accompanying AI's dramatic evolution from the inside<span class="frag-sub">Creative2 / AI Advisor</span></span>
+          <span class="toggle-icon" aria-hidden="true"></span>
+        </button>
+        <div class="fragment-detail">
+          <div>
+            <div class="frag-inner">
+              <p class="frag-body">AI advisor at media company Creative2 since 2025. Accompanying and personally experiencing AI's rapid evolution from within the business.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Notes (Background + Strengths) ── -->
+  <section class="appendix">
+    <p class="appendix-label">Notes</p>
+
+    <div class="fragment">
+      <button class="fragment-toggle" aria-expanded="false" onclick="toggleFragment(this)">
+        <span class="frag-text">Background</span>
+        <span class="toggle-icon" aria-hidden="true"></span>
+      </button>
+      <div class="fragment-detail">
+        <div>
+          <div class="frag-inner">
+            <p class="frag-body" style="margin-bottom:22px;">A technology-leaning generalist with founder experience across large corporations, SMBs, venture capital, startups, freelance, hyper-growth ventures, and public companies.</p>
+            <ul class="career-list">
+              <li><span class="career-year">2026 — Now</span><span><span class="career-where">WA108 (STORYS.JP)</span><span class="career-role"> — Founder / Director</span></span></li>
+              <li><span class="career-year">2025 — Now</span><span><span class="career-where">Creative2</span><span class="career-role"> — AI Advisor</span></span></li>
+              <li><span class="career-year">2022 — Now</span><span><span class="career-where">ao. inc.</span><span class="career-role"> — Director</span></span></li>
+              <li><span class="career-year">2022 — Now</span><span><span class="career-where">G's Academy</span><span class="career-role"> — Mentor</span></span></li>
+              <li><span class="career-year">2020 – 2024</span><span><span class="career-where">ExaWizards</span><span class="career-role"> — Product Manager / UX Designer</span></span></li>
+              <li><span class="career-year">2018 – 2019</span><span><span class="career-where">BoostIO (IssueHunt)</span><span class="career-role"> — COO / UI-UX Designer / Growth</span></span></li>
+              <li><span class="career-year">2018</span><span><span class="career-where">Tradecraft (San Francisco)</span><span class="career-role"> — Product Designer</span></span></li>
+              <li><span class="career-year">2016 – 2018</span><span><span class="career-where">Coincheck</span><span class="career-role"> — 2nd hire → Global Alliance Lead → Advisor</span></span></li>
+              <li><span class="career-year">2015 — Now</span><span><span class="career-where">Independent</span><span class="career-role"> — PM, Executive Coach, Angel Investor, AI Advisor, Podcaster</span></span></li>
+              <li><span class="career-year">2015</span><span><span class="career-where">Samurai Engineer Bootcamp</span><span class="career-role"> — Instructor</span></span></li>
+              <li><span class="career-year">2014 – 2016</span><span><span class="career-where">HACKMAI (Chicago) / BRIGHT CLASS (Tokyo)</span><span class="career-role"> — Founder</span></span></li>
+              <li><span class="career-year">2013 – 2014</span><span><span class="career-where">BEENOS</span><span class="career-role"> — Venture Investment Associate</span></span></li>
+              <li><span class="career-year">2010 – 2011</span><span><span class="career-where">Nomura Research Institute</span><span class="career-role"> — System Analyst</span></span></li>
+            </ul>
+            <h4 class="skills-label">Skills</h4>
+            <div class="skills-list">
+              <span>New business development</span><span class="skill-sep">/</span>
+              <span>Product manager</span><span class="skill-sep">/</span>
+              <span>Digital product design</span><span class="skill-sep">/</span>
+              <span>Web development</span><span class="skill-sep">/</span>
+              <span>Venture investing</span><span class="skill-sep">/</span>
+              <span>AI advisor</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
+    <div class="fragment">
+      <button class="fragment-toggle" aria-expanded="false" onclick="toggleFragment(this)">
+        <span class="frag-text">Strengths</span>
+        <span class="toggle-icon" aria-hidden="true"></span>
+      </button>
+      <div class="fragment-detail">
+        <div>
+          <div class="frag-inner">
+            <ul class="strengths-list">
+              <li><span class="strength-name">Futuristic</span><span class="strength-desc">Inspires others with visions of the future.</span></li>
+              <li><span class="strength-name">Ideation</span><span class="strength-desc">Finds connections between seemingly disparate phenomena.</span></li>
+              <li><span class="strength-name">Individualization</span><span class="strength-desc">Brings teams together through each person's uniqueness.</span></li>
+              <li><span class="strength-name">Learner</span><span class="strength-desc">Finds meaning in learning itself, more than in outcomes.</span></li>
+              <li><span class="strength-name">Restorative</span><span class="strength-desc">Locates the source of problems and resolves them.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <p class="footer-intro">If this resonates, say hi.</p>
+
+    <div class="footer-group">
+      <span class="footer-group-label">Listen</span>
+      <div class="footer-links">
+        <a class="footer-link" href="https://open.spotify.com/show/4IT6zgmcXa4PL4HlvAnkCL?si=6a1dbf5cb0754e05&amp;nd" target="_blank" rel="noopener noreferrer">Podcast｜Strategic Happiness</a>
+        <a class="footer-link" href="https://open.spotify.com/show/7ceyWzwydxB5Ycmj5jlkTp?si=786d3fbfd23b4496" target="_blank" rel="noopener noreferrer">Podcast｜Post-Capitalist Kept-Man Theory</a>
+        <a class="footer-link" href="https://open.spotify.com/show/5XJYg9A8Th17oR3D5uC67j?si=2506386665864b77" target="_blank" rel="noopener noreferrer">Podcast｜STORYS — Life Stories</a>
+        <a class="footer-link" href="https://note.com/futurehuman" target="_blank" rel="noopener noreferrer">note</a>
+      </div>
+    </div>
+
+    <div class="footer-group">
+      <span class="footer-group-label">Work</span>
+      <div class="footer-links">
+        <a class="footer-link" href="https://ao-inc.company/" target="_blank" rel="noopener noreferrer">ao inc.</a>
+        <a class="footer-link" href="https://www.storys.jp/" target="_blank" rel="noopener noreferrer">STORYS.JP</a>
+        <a class="footer-link" href="https://gsacademy.jp/" target="_blank" rel="noopener noreferrer">G's Academy mentor</a>
+        <a class="footer-link" href="https://angl.jp/kagakawa" target="_blank" rel="noopener noreferrer">Angel investing</a>
+      </div>
+    </div>
+
+    <div class="footer-group">
+      <span class="footer-group-label">Reach out</span>
+      <div class="footer-links">
+        <a class="footer-link" href="https://twitter.com/kagayakimann" target="_blank" rel="noopener noreferrer">𝕏 / Twitter</a>
+        <a class="footer-link" href="https://instagram.com/kagayakiman" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a class="footer-link" href="https://www.linkedin.com/in/kagakawabata" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="footer-link" href="https://m.facebook.com/profile.php?id=100000652354295" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a class="footer-link" href="https://www.messenger.com/t/kagakawa" target="_blank" rel="noopener noreferrer">Messenger</a>
+        <a class="footer-link" href="https://kagakawa.notion.site/63d495c976034993b75506254a00edb9" target="_blank" rel="noopener noreferrer">Walking coaching</a>
+        <a class="footer-link" href="https://note.com/futurehuman/n/n4a0d86b4c42c" target="_blank" rel="noopener noreferrer">About me (note)</a>
+      </div>
+    </div>
+
+    <div class="footer-sign">
+      <img class="profile" src="./profile.jpg" alt="Kaga Kawabata" loading="lazy">
+      <div class="sign-row">
+        <p class="sign-romaji">KAGAYAKI KAWABATA</p>
+        <img class="hanko" src="./kagakawa-hanko.png" alt="Seal" loading="lazy">
+      </div>
+    </div>
+
+    <nav class="footer-foot" aria-label="Language">
+      <a href="https://kagakawa.com/jp/" aria-label="日本語ページへ">日本語</a>
+      <span class="divider" aria-hidden="true">/</span>
+      <span class="current" aria-current="page">English</span>
+    </nav>
   </footer>
 
-  <script>
-    function toggleFragment(btn) {
-      var detail = btn.nextElementSibling;
-      detail.classList.toggle('is-open');
-      btn.classList.toggle('is-open');
-    }
-
-    function observeFade(selector, threshold) {
-      document.querySelectorAll(selector).forEach(function(el) {
-        var obs = new IntersectionObserver(function(entries) {
-          entries.forEach(function(e) {
-            if (e.isIntersecting) { el.classList.add('is-visible'); obs.disconnect(); }
-          });
-        }, { threshold: threshold });
-        obs.observe(el);
-      });
-    }
-
-    observeFade('.fragment', 0.15);
-    observeFade('.zone-label', 0.3);
-    observeFade('.name-block', 0.3);
-    observeFade('.tagline', 0.3);
-    observeFade('.breath', 0.3);
-
-    var indicator = document.getElementById('scroll-indicator');
-    var arrow = document.getElementById('scroll-arrow');
-    var scrolled = false;
-
-    setTimeout(function() {
-      if (!scrolled) {
-        indicator.style.transition = 'opacity 1s ease 6.5s';
-        indicator.style.opacity = '1';
-      }
-    }, 400);
-
-    setTimeout(function() {
-      if (!scrolled) {
-        arrow.style.animation = 'scrollHint 2s ease-in-out infinite';
-      }
-    }, 7400);
-
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 80 && !scrolled) {
-        scrolled = true;
-        indicator.style.transition = 'opacity 0.4s ease';
-        indicator.style.opacity = '0';
-        arrow.style.animation = 'none';
-      }
-    }, { passive: true });
-  </script>
 </body>
+
 </html>

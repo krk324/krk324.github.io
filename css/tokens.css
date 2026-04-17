@@ -1,0 +1,73 @@
+/* ============================================
+   tokens.css — 設計トークン
+   輝度・筆致・余白のスケールを一箇所に集約
+   ============================================ */
+
+:root {
+  /* ── Ink (dark) ───────────────────────────── */
+  --c-ink-0: #0a0908;          /* 漆黒 — hero initial */
+  --c-ink-1: #1a1612;          /* 夜明け手前 */
+  --c-ink-2: #2a2623;          /* zone 一/三 本文 */
+  --c-ink-3: #302c28;          /* 標準本文 */
+  --c-ink-4: #3a342e;          /* zone 二 本文 */
+  --c-ink-5: #5e5850;           /* frag-body */
+  --c-ink-6: #6b6560;           /* tagline / 淡本文 */
+  --c-ink-7: #706a62;           /* pod-card */
+
+  /* ── Stone (neutrals) ─────────────────────── */
+  --c-stone-0: #8b857f;
+  --c-stone-1: #8f8780;         /* accent */
+  --c-stone-2: #9a8f82;          /* zone 一 accent */
+  --c-stone-3: #a8a095;          /* scroll indicator */
+  --c-stone-4: #a39a8e;
+  --c-stone-5: #b8ad9f;          /* zone 二 accent */
+  --c-stone-6: #c0b8ad;          /* zone label */
+  --c-stone-7: #c4bdb2;
+  --c-stone-8: #d6cfc5;          /* selection */
+  --c-stone-9: #dcd7d0;          /* hero initial text */
+
+  /* ── Paper (light) ────────────────────────── */
+  --c-paper-0: #ede7dc;          /* zone 三 warming */
+  --c-paper-1: #efece6;          /* base bg */
+  --c-paper-2: #f1eee8;          /* breath 1→2 */
+  --c-paper-3: #f2efe8;          /* breath 2→3 / sink */
+  --c-paper-4: #f4f1ec;          /* legacy base */
+  --c-paper-5: #f6f3ed;          /* zone 二 (最明) */
+
+  /* ── Singular punctuation ─────────────────── */
+  --c-hanko: #b24a2e;            /* 朱 — 判子のみ */
+  --c-gold: #c0932a;              /* 輝き — zone 三 一箇所 */
+
+  /* ── Border ───────────────────────────────── */
+  --c-border-0: rgba(180, 172, 160, 0.2);
+  --c-border-1: rgba(180, 172, 160, 0.3);
+  --c-border-2: rgba(160, 152, 140, 0.35);
+  --c-border-3: rgba(160, 152, 140, 0.4);
+  --c-border-4: rgba(143, 135, 128, 0.25);
+
+  /* ── Typography ───────────────────────────── */
+  --ff-mincho: 'Zen Old Mincho', 'Yu Mincho', serif;
+  --ff-mincho-alt: 'Shippori Mincho B1', 'Zen Old Mincho', 'Yu Mincho', serif;
+  --ff-gothic: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
+  --ff-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* ── Spacing (8pt scale) ──────────────────── */
+  --s-1: 8px;
+  --s-2: 16px;
+  --s-3: 24px;
+  --s-4: 32px;
+  --s-5: 40px;
+  --s-6: 48px;
+  --s-7: 56px;
+  --s-8: 80px;
+  --s-10: 100px;
+  --s-13: 120px;
+
+  /* ── Layout ───────────────────────────────── */
+  --w-col: 640px;
+  --w-pad: 32px;
+
+  /* ── Motion ───────────────────────────────── */
+  --ease-out-quart: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-out-quint: cubic-bezier(0.16, 1, 0.3, 1);
+}
